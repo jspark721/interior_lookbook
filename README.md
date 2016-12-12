@@ -1,13 +1,6 @@
-# Simple Project Starter
-Ready to go file structure for creating a basic static site.
+# Interior Lookbook 
+Interior Design Ideas and Resources website built with basic front-end development.
 
-The file includes:
+## Web Design with Sketch
+![alt tag](https://cloud.githubusercontent.com/assets/16334022/21120543/b4366f1c-c07c-11e6-9b79-8a258e011a55.png)
 
-- index.html
-  - html structure
-  - Normalize cdn link
-  - styles.css link
-  - global.js link
-- Sass
-- JS
-- Images
