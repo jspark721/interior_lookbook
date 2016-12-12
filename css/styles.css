@@ -58,15 +58,98 @@ html, body {
 .resources {
     padding: 0;
     margin: 0;
-    list-style: none;
+    list-style: none; }
+    .resources li {
+        width: 25%;
+        float: left;
+        display: inline-block;
+        position: relative;
+        transition: transform 0.4s;
+        overflow: hidden;
+        transition: transform 0.4s, opacity 0.1s 0.3s;
+        display: table; }
+        .resources li img {
+            width: 100%;
+            height: 100%; }
+    .resources .resource_info {
+        background: rgba(180,222,223, 0.85);
+        padding: 2.5em 10%;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: auto;
+        bottom: 0;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: transform 0.4s, opacity 0.1s 0.3s;
+        display: table-cell;
+        vertical-align: middle; }
+    .resources .resource_info h2 { 
+        margin: 0 0 1em 0;
+        color: #ffffff;
+        font-size: 1.5em;
+        line-height: 1;
+        text-transform: uppercase; }
+    .resources .resource_info .button {
+        border: 2px solid #ffffff;
+        padding: 1em 1.5em;
+        border-radius: 0.5em;
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.9em;
+        font-weight: 700;
+        transition: all 0.4s ease-in-out; }
+    .resources .resource_info .button:hover{
+        border: 2px solid #B4DEDF;
+        color: #B4DEDF; }
+    .resources li:hover img {
+        transform: scale(1.5);
+        transition: transform 0.4s, opacity 0.1s 0.3s; }
+    .resources li:hover .resource_info {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: transform 0.4s, opacity 0.1s; }
+
+@media only screen and (max-width: 1250px) {
+    .resources li {
+        width: 33.333%;
+    }
 }
-.resources li {
-    width: 25%;
-    float: left;
-    display: inline-block;
-    position: relative;
+@media only screen and (max-width: 900px) {
+    .banner h1 {
+        padding: 1.5em 0;
+        font-size: 3.5em;
+    }    
+    .nav a, .nav label {
+        font-size: 1.1em;
+        margin-right: 1em;
     }
-.resources li img {
-    width: 300px;
-    height: 200px;
+    .nav label {
+        margin-right: 0;
+        border-right: 1px solid #B4DEDF;
+        padding-right: 1.5em; 
     }
+    .nav input[type="search"] {
+        padding: 1.5em;
+        font-size: 1.1em;
+    }
+    .resources li{
+        width: 50%; 
+    }
+    .resources li .resource_info {
+        padding: 3.5em 15%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .banner h1{
+        padding: 1.5em 0;
+        font-size: 2.5em;
+    }
+    .nav a {
+        display: none;
+    }
+    .resources li {
+        width: 100%;
+    }
+}
